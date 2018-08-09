@@ -1,0 +1,86 @@
+
+.cardContainer{
+    // color: red;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // background: transparent;
+    z-index: 10;
+}
+// .card{
+//     display: inline-block;
+//     width:570px;
+//     min-height:400px;
+// }
+.card2{
+    display: inline-block;
+    background:white;
+    padding: 45px;
+    color:#00493f;
+    margin:50px;
+
+    width:570px;
+    min-height:400px;
+    // position: absolute;
+    // z-index: 20;
+        
+    h1{ 
+        font-size: 29px;
+        font-weight: 400;
+        margin: 0;
+        line-height: .8
+    }
+    p{  
+        // margin:initial;
+        margin: 10px 0;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    ul li{
+        // color: red;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-left: 1.6rem;
+    }
+    .download{
+        display:inline-block;
+        border: 1px solid black;
+        padding:6px 16px;
+        margin-top:2rem;
+        margin-bottom: 10px;
+        transition: all .2s ease;
+    }
+    .github{
+        text-decoration: underline;
+    }
+    .getintouch{
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+}
+
+
+
+
+@media only screen and (max-width:530px) {
+    .card2{
+        margin:20px;
+        padding: 25px;
+        // position: relative;
+        // bottom: 0px;
+        // background: rgba(255, 255, 255, .4);
+    }
+    // .cardContainer{
+    // align-items: flex-end;
+    // }
+}
+
+.download:hover{
+    transform: translateY(-4px);
+    background: #498e92;
+    color:white;
+}

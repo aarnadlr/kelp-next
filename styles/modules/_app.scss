@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+
+html {
+	box-sizing: border-box;
+	//Declare font sizes as if in px, but in rem. ie: For 16px, declare 1.6rem
+	font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body,html{
+    // min-height: 100vh;
+    overflow: hidden;
+}
+
+
+///////////////////////////
+///////////////////////////
+$lines: 32; // no of <li> elements, has to be an even number. Getting a warning when an odd number is used.
+
+$delayandduration: 3; // use this number to divide both animation duration for <ul> and animation delay for <li>. Controls the speed of the animation. Greater = faster.
+$delayandduration2: 3; // use this number to divide both animation duration for <ul> and animation delay for <li>. Controls the speed of the animation. Greater = faster.
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    // background: rgb(2,39,39);
+    // background: navy;
+    // background: linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 35%, rgba(29,131,135,1) 74%, rgba(96,176,128,1) 100%);
+    // background: -webkit-linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 35%, rgba(29,131,135,1) 74%, rgba(96,176,128,1) 100%);
+	font-family: 'IBM Plex Mono', monospace;
+	color:rgb(0, 26, 26);
+    background: url(/static/kelp-bcg.jpg) no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+    background-size: cover;
+    // min-height: 100%;
+	// overflow: hidden;
+}
+
+
+.strand{
+	position: absolute;
+	width:170px;
+	bottom:0px;
+	overflow: hidden;
+}
+
+// $starting: -40px;
+// $increment: 120px;
+
+.first{
+	height:95vh;
+	left:-40px;
+}
+.second{
+	height:100vh;
+	left:100px;
+}
+.third{
+	height:90vh;
+	left:240px;
+}
+.fourth{
+	height:100vh;
+	left:380px;
+}
+.fifth{
+	height:85vh;
+	left:520px;
+}
+.sixth{
+	height:95vh;
+	left:660px;
+}
+.seventh{
+	height:100vh;
+	left:800px;
+}
+.eighth{
+	height:80vh;
+	left:940px;
+}
+.ninth{
+	height:100vh;
+	left:1080px;
+}
+.tenth{
+	height:95vh;
+	left:1220px;
+}
+.eleventh{
+	height:80vh;
+	left:1360px;
+}
+
+.twelfth{
+	height:100vh;
+	left:1500px;
+}
+.thirteenth{
+	height:90vh;
+	left:1640px;
+}
+
+
+.strand ul {
+	// 👇 MASTER STRAND COLOR CONTROL:
+	color: rgb(0, 36, 36);
+	// position: relative;
+	opacity:.9;
+	// overflow: hidden;
+	// perspective: 900px;
+	list-style: none;
+	// height: 100vh;
+	// max-height: 800px;
+	// min-height: 400px;
+	text-align: center;
+	font-size:14px;
+	line-height:.6;
+}
+
+
+.strand li {
+	position: absolute;
+	// top: 0;
+	// width: 100%;
+	// background: pink;
+	transform: translateY(105vh);
+	// animation: #{$lines/$delayandduration}s spiral-staircase linear infinite;
+}
+
+.strand li {
+	animation: #{$lines/$delayandduration}s spiral-staircase3 linear infinite;
+}
+
+
+//  👇CONTROLS THE SPACE/GAP/TIMING BETWEEN ELEMENTS ON THE Y AXIS:
+@for $i from 1 through $lines {
+	li:nth-child(#{$i}) {
+		// animation-delay: #{$i/$delayandduration}s;
+		// 👇 This math equation provides FULLY GROWN strands on page load
+		animation-delay: #{$i/$delayandduration - 11}s;
+		}
+}
+ 
+
+
+//  👇CONTROLS THE WAVE DEPTH (X-AXIS):
+// CHanged from REM to PX for better control
+@for $r from 1 through $lines/2 {
+	li:nth-child(#{$r}) {
+		// right: #{$r/4}rem;
+		right: #{$r*6}px;
+		}
+	li:nth-last-child(#{$r}) {
+		// right: #{$r/4}rem;
+		right: #{$r*6}px;
+		}
+	}
+
+@keyframes spiral-staircase3 {
+	0% {
+		transform: rotateY(290deg) translateY(105vh) ;
+	}
+	100% {
+		transform: rotateY(-290deg) translateY(-5vh) ;
+	}
+}
