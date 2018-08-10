@@ -35,7 +35,8 @@ body {
     // background: -webkit-linear-gradient(0deg, rgba(2,39,39,1) 0%, rgba(9,89,78,1) 35%, rgba(29,131,135,1) 74%, rgba(96,176,128,1) 100%);
 	font-family: 'IBM Plex Mono', monospace;
 	color:rgb(0, 26, 26);
-    background: url(/static/kelp-bcg.jpg) no-repeat center center fixed;
+    // background: url(/static/kelp-bcg.jpg) no-repeat center center fixed;
+    background: url(/lightyear/kelp-helix-5/static/kelp-bcg.jpg) no-repeat center center fixed;
 //     -webkit-background-size: cover;
 //   -moz-background-size: cover;
 //   -o-background-size: cover;
@@ -114,7 +115,7 @@ body {
 	// 👇 MASTER STRAND COLOR CONTROL:
 	color: rgb(0, 36, 36);
 	// position: relative;
-	opacity:.9;
+	opacity:.7;
 	// overflow: hidden;
 	// perspective: 900px;
 	list-style: none;

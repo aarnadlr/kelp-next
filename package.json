@@ -2,7 +2,11 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start"
+  },
+  "now": {
+    "alias": "kelp-now"
   },
   "dependencies": {
     "@zeit/next-sass": "0.0.9",

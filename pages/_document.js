@@ -13,7 +13,10 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel='stylesheet'
+            // 👇 USE FOR `NOW` DEPLOYMENT:
             href='/_next/static/style.css'
+            // 👇 USE FOR STATIC DEPLOYMENT:
+            // href='/lightyear/kelp-helix-5/_next/static/style.css'
           />
         </Head>
         <body>
