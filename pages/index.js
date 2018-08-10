@@ -11,19 +11,19 @@ const strand5=[];
 
 // For loop pushes 32 numbers at a time, inside <li>s, into each array
 for (let i = 0; i < 32; i++) {
-  strand1.push(<li>{numArr[i]}</li>)
+  strand1.push(<li key={i}>{numArr[i]}</li>)
 };
 for (let i = 32; i < 64; i++) {
-  strand2.push(<li>{numArr[i]}</li>)
+  strand2.push(<li key={i}>{numArr[i]}</li>)
 };
 for (let i = 64; i < 96; i++) {
-  strand3.push(<li>{numArr[i]}</li>)
+  strand3.push(<li key={i}>{numArr[i]}</li>)
 };
 for (let i = 96; i < 128; i++) {
-  strand4.push(<li>{numArr[i]}</li>)
+  strand4.push(<li key={i}>{numArr[i]}</li>)
 };
 for (let i = 128; i < 160; i++) {
-  strand5.push(<li>{numArr[i]}</li>)
+  strand5.push(<li key={i}>{numArr[i]}</li>)
 };
 
 export default () =>
