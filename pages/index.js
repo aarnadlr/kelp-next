@@ -1,100 +1,109 @@
 import '../styles/style.scss'
 
-import numArr1 from '../scripts/numArr1'
-import numArr2 from '../scripts/numArr3'
-import numArr3 from '../scripts/numArr3'
+// Import the number array
+import numArr from '../scripts/numArr'
+// Create new strand arrays
+const strand1=[];
+const strand2=[];
+const strand3=[];
+const strand4=[];
+const strand5=[];
 
-const numStrand1 = numArr1.map((num, i )=> (
-  <li key={i}>{num}</li>
-));
-
-const numStrand2 = numArr2.map((num, i )=> (
-  <li key={i}>{num}</li>
-));
-
-const numStrand3 = numArr3.map((num, i )=> (
-  <li key={i}>{num}</li>
-));
+// For loop pushes 32 numbers at a time, inside <li>s, into each array
+for (let i = 0; i < 32; i++) {
+  strand1.push(<li>{numArr[i]}</li>)
+};
+for (let i = 32; i < 64; i++) {
+  strand2.push(<li>{numArr[i]}</li>)
+};
+for (let i = 64; i < 96; i++) {
+  strand3.push(<li>{numArr[i]}</li>)
+};
+for (let i = 96; i < 128; i++) {
+  strand4.push(<li>{numArr[i]}</li>)
+};
+for (let i = 128; i < 160; i++) {
+  strand5.push(<li>{numArr[i]}</li>)
+};
 
 export default () =>
-    
     <div className="wrapper">
 
       <div className="strand first">
         <ul>
-          {numStrand1}
+          {strand1}
         </ul>
       </div>
 
       <div className="strand second">
         <ul>
-          {numStrand2}
+          {strand2}
         </ul>
       </div>
 
       <div className="strand third">
         <ul>
-          {numStrand3}
+          {strand3}
         </ul>
       </div>
 
       <div className="strand fourth">
         <ul>
-          {numStrand1}
+          {strand4}
         </ul>
       </div>
 
       <div className="strand fifth">
         <ul>
-          {numStrand2}
+          {strand5}
         </ul>
       </div>
 
       <div className="strand sixth">
         <ul>
-          {numStrand3}
+          {strand1}
         </ul>
       </div>
 
       <div className="strand seventh">
         <ul>
-          {numStrand1}
+          {strand2}
         </ul>
       </div>
 
       <div className="strand eighth">
         <ul>
-          {numStrand2}
+          {strand3}
         </ul>
       </div>
 
       <div className="strand ninth">
         <ul>
-          {numStrand3}
+          {strand4}
         </ul>
       </div>
       
       <div className="strand tenth">
         <ul>
-          {numStrand1}
+          {strand5}
         </ul>
       </div>
 
       <div className="strand eleventh">
         <ul>
-          {numStrand2}
+          {strand1}
         </ul>
       </div>
       
       <div className="strand twelfth">
         <ul>
-          {numStrand3}
+          {strand2}
         </ul>
       </div>
 
       <div className="strand thirteenth">
         <ul>
-          {numStrand1}
+          {strand3}
         </ul>
       </div>
 
