@@ -106,7 +106,4 @@ export default () =>
           {strand3}
         </ul>
       </div>
-
-{/* <style jsx>{`
-`}</style> */}
 </div>
