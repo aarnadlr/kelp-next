@@ -2,6 +2,7 @@ import '../styles/style.scss'
 
 // Import the number array
 import numArr from '../scripts/numArr'
+import Card from '../Components/Card';
 // Create new strand arrays
 const strand1=[];
 const strand2=[];
@@ -29,6 +30,7 @@ for (let i = 128; i < 160; i++) {
 export default () =>
     <div className="wrapper">
 
+      <Card/>
       <div className="strand first">
         <ul>
           {strand1}
